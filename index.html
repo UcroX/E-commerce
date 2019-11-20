@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>E-commerce</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+
+</head>
+<body>
+	<!-- creacion de la barra de navegacion  -->
+	<nav class="navbar navbar-inverse">
+		<div class="container fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">E-commerce</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Canasta</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-off"></span> Salir</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav> <!-- cierre de la barra de navegacion -->
+	<!-- creacion del contenedor primario -->
+	<div class="container fluid">
+		<!-- creacion del contenedor para la clase row -->
+		<div class="row">
+			<!-- el contenedor tiene tres columnas en su tamaño -->
+			<div class="col-md-3 sidenav">
+				<!-- creacion del input con el boton de buscar -->
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Buscar Camisetas">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">
+							<span class="glyphicon glyphicon-search"></span>	
+						</button>
+					</span>
+				</div>
+				<!-- creacion del contenedor de las listas que tiene como responsive desaparece en pantallas pequeñas con la propiedad hidden- -->
+				<div class="list-group hidden-sm hidden-xs">
+        			<h4>Categorias</h4>
+        			<a href="#" class="list-group-item active">Todos<span class="badge pull-right">100</span></a></li>
+        			<a href="#" class="list-group-item">Hombre<span class="badge pull-right">4</span></a></li>
+        			<a href="#" class="list-group-item">Mujer<span class="badge pull-right">12</span></a></li>
+        			<a href="#" class="list-group-item">Hipster<span class="badge pull-right">24</span></a></li>
+        			<a href="#" class="list-group-item">Metal<span class="badge pull-right">6</span></a></li>
+        			<a href="#" class="list-group-item">Universidad<span class="badge pull-right">5</span></a></li>
+        			<a href="#" class="list-group-item">Deportiva<span class="badge pull-right">8</span></a></li>
+        			<a href="#" class="list-group-item">Rayas<span class="badge pull-right">11</span></a></li>
+        			<a href="#" class="list-group-item">Apretada<span class="badge pull-right">19</span></a></li>
+    			</div>
+			</div> <!--  cierre del contenedor que tiene 3 columnas de tamaño -->
+			<!-- creacion del carrusel para las imagnes tiene tamaño de 9 columnas -->
+    		<div id="myCarousel" class="carousel slide col-md-9" data-ride="carousel">
+				<!-- creacion de los indicadores y uno activo -->
+    			<ol class="carousel-indicators">
+    				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    				<li data-target="#myCarousel" data-slide-to="1"></li>
+    				<li data-target="#myCarousel" data-slide-to="2"></li>
+    			</ol>
+				<!-- creacion de los item que contienen las imagenes -->
+    			<div class="carousel-inner">
+
+   					<div class="item active">
+   						<img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/banner-slider-1.jpg" alt="">
+   					</div>
+
+   					<div class="item">
+    					<img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/banner-slider-2.jpg" alt="">
+    				</div>
+
+    				<div class="item">
+    					<img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/banner-slider-3.jpg" alt="">
+    				</div>
+    			</div>
+				<!-- creacion de las barra de direcciones que mueve las imagenes hacia la derecha y la izquierda -->
+    			<a href="#myCarousel" class="left carousel-control" data-slide="prev">
+    				<span class="glyphicon glyphicon-chevron-left"></span>
+    				<span class="sr-only">anterior</span>
+   				</a>
+
+   				<a href="#myCarousel" class="right carousel-control" data-slide="next">
+   					<span class="glyphicon glyphicon-chevron-right"></span>
+   					<span class="sr-only">siguiente</span>
+    			</a>
+        	</div> <!-- cierre del carrusel -->
+		
+			<div class="container col-lg-9 col-md-9 col-sm-12 col-xs-12"> <!-- Inicio del contenedor interno -->
+				
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+					<div class="thumbnail">
+						<img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-1.jpg" alt="">
+						<div class="caption">
+							<h4>Hipster Ultimate</h4>
+							<p>La camiseta ideal para hipster</p>
+							<p>
+								<a href="#" class="btn btn-primary" role="button">$299 <span class="glyphicon glyphicon-shopping-cart"></span></a>
+								<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal1">Detalle</button>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+					<div class="thumbnail">
+						<img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-2.jpg" alt="">
+						<div class="caption">
+							<h4>On Motion Live</h4>
+							<p>Perfecta para salidas rocosas</p>
+							<p>
+								<a href="#" class="btn btn-primary" role="button">$399<span class="glyphicon glyphicon-shopping-cart"></span></a>
+								<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2">Detalle</button>
+							</p>
+						</div>
+					</div>	
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+					<div class="thumbnail">
+						<img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-3.jpg" alt="">
+						<div class="caption">
+							<h4>Underground Max</h4>
+							<p>Para los amantes del underground</p>
+							<p>
+								<a href="#" class="btn btn-primary" role="button">$199<span class="glyphicon glyphicon-shopping-cart"></span></a>
+								<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal3">Detalle</button>
+							</p>
+						</div>
+					</div>	
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+					<div class="thumbnail">
+						<img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-4.jpg" alt="">
+						<div class="caption">
+							<h4>Rebelde sin Causa</h4>
+							<p>Para aquellos que buscan la rebeldia</p>
+							<p>
+								<a href="#" class="btn btn-primary" role="button">$499<span class="glyphicon glyphicon-shopping-cart"></span></a>
+								<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal4">Detalle</button>
+							</p>
+						</div>	
+					</div>	
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+					<div class="thumbnail">
+						<img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-5.jpg" alt="">
+						<div class="caption">
+							<h4>Deportiva full</h4>
+							<p>Para los hacer deporte sano</p>
+							<p>
+								<a href="#" class="btn btn-primary" role="button">$299<span class="glyphicon glyphicon-shopping-cart"></span></a>
+								<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal5">Detalle</button>
+							</p>
+						</div>	
+					</div>	
+				</div>
+
+				<!-- Creacion del modal1 -->
+				<div class="modal fade" id="myModal1" role="dialog">
+					<div class="modal-dialog">
+						<!-- creacion del contenido del modal1 -->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Hipster Ultimate</h4>
+							</div>
+							<!-- creacion del cuerpo del modal1 -->
+							<div class="modal-body">
+								<div class="alert alert-danger">
+									<span class="glyphicon glyphicon-info-sign"></span> Este producto esta agotado
+								</div>
+								<div class="row">
+									<div class="col-xs-6 col-sm-6 col-md-6">
+										<div class="thumbnail">
+											<img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-1.jpg" alt="">
+										</div>
+									</div>
+									<h4>Precio: <strong>$299</strong></h4>
+									<h4>Calificacion:
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star-empty"></span>
+									</h4>
+									<h4>
+									<span class="label label-warning">Hipster</span>
+									<span class="label label-default">Deportiva</span>
+									</h4>
+									<a href="#"><span class="glyphicon glyphicon-heart"></span> Agregar a los deseos</a>
+								</div>
+								<ul class="nav nav-tabs">
+									<li class="active"><a data-toggle="tab" href="#descripcion">Descripcion</a></li>
+									<li><a data-toggle="tab" href="#comentarios">Comentarios</a></li>
+								</ul>
+								<div class="tab-content">
+									<div id="descripcion" class="tab-pane fade in active">
+										<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original.</p>
+									</div>
+									<div id="comentarios" class="tab-pane fade">
+										<div class="panel panel-default">
+											<div class="panel-heading">Rodrigo Manuel Olivera comento hace 2 dias</div>
+											<div class="panel-body">
+												Espero y tengan este producto para el siguente mes.
+											</div>
+										</div>
+										<textarea class="form-control" rows="3" placeholder="Ingrese aqui su comentario"></textarea>
+									</div>
+								</div>
+								<!-- creacion del pie del modal1 -->
+								<div class="modal-footer">
+								    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+								    <button type="button" class="btn btn-primary">Comprar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- cierre del modal1 -->
+
+				<!-- Creacion del modal2 -->
+				<div class="modal fade" id="myModal2" role="dialog">
+					<div class="modal-dialog">
+						<!-- creacion del contenido del modal2 -->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">On Motion Live</h4>
+							</div>
+							<!-- creacion del cuerpo del modal2 -->
+							<div class="modal-body">
+								<div class="alert alert-info">
+									<span class="glyphicon glyphicon-info-sign"></span> Cantidades existentes
+								</div>
+								<div class="row">
+									<div class="col-xs-6 col-sm-6 col-md-6">
+										<div class="thumbnail">
+											<img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-2.jpg" alt="">
+										</div>
+									</div>
+									<h4>Precio: <strong>$399</strong></h4>
+									<h4>Calificacion:
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+									</h4>
+									<h4>
+									<span class="label label-warning">Motion</span>
+									<span class="label label-default">Deportiva</span>
+									<span class="label label-default">Live</span>
+									</h4>
+									<a href="#"><span class="glyphicon glyphicon-heart"></span> Agregar a los deseos</a>
+								</div>
+								<ul class="nav nav-tabs">
+									<li class="active"><a data-toggle="tab" href="#descripcion2">Descripcion</a></li>
+									<li><a data-toggle="tab" href="#comentarios2">Comentarios</a></li>
+								</ul>
+								<div class="tab-content">
+									<div id="descripcion2" class="tab-pane fade in active">
+										<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.</p>
+									</div>
+									<div id="comentarios2" class="tab-pane fade">
+										<div class="panel panel-default">
+											<div class="panel-heading">Manuel Otero comento hace 1 dia</div>
+											<div class="panel-body">
+												Chevere sus productos.
+											</div>
+										</div>
+										<textarea class="form-control" rows="3" placeholder="Ingrese aqui su comentario"></textarea>
+									</div>
+								</div>
+								<!-- creacion del pie del modal2 -->
+								<div class="modal-footer">
+								    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+								    <button type="button" class="btn btn-primary">Comprar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- cierre del modal2 -->
+
+				<!-- Creacion del modal3 -->
+				<div class="modal fade" id="myModal3" role="dialog">
+					<div class="modal-dialog">
+						<!-- creacion del contenido del modal3 -->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Underground Max</h4>
+							</div>
+							<!-- creacion del cuerpo del modal3 -->
+							<div class="modal-body">
+								<div class="alert alert-info">
+									<span class="glyphicon glyphicon-info-sign"></span> Cantidades existentes
+								</div>
+								<div class="row">
+									<div class="col-xs-6 col-sm-6 col-md-6">
+										<div class="thumbnail">
+											<img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-3.jpg" alt="">
+										</div>
+									</div>
+									<h4>Precio: <strong>$199</strong></h4>
+									<h4>Calificacion:
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+									</h4>
+									<h4>
+									<span class="label label-warning">Underground</span>
+									<span class="label label-default">Black</span>
+									<span class="label label-default">Calle</span>
+									</h4>
+									<a href="#"><span class="glyphicon glyphicon-heart"></span> Agregar a los deseos</a>
+								</div>
+								<ul class="nav nav-tabs">
+									<li class="active"><a data-toggle="tab" href="#descripcion3">Descripcion</a></li>
+									<li><a data-toggle="tab" href="#comentarios3">Comentarios</a></li>
+								</ul>
+								<div class="tab-content">
+									<div id="descripcion3" class="tab-pane fade in active">
+										<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.</p>
+									</div>
+									<div id="comentarios3" class="tab-pane fade">
+										<div class="panel panel-default">
+											<div class="panel-heading">Marsio Verbel comento hace 3 dias</div>
+											<div class="panel-body">
+												Exelente coleccion.
+											</div>
+										</div>
+										<textarea class="form-control" rows="3" placeholder="Ingrese aqui su comentario"></textarea>
+									</div>
+								</div>
+								<!-- creacion del pie del modal3 -->
+								<div class="modal-footer">
+								    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+								    <button type="button" class="btn btn-primary">Comprar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- cierre del modal3 -->
+
+				<!-- Creacion del modal4 -->
+				<div class="modal fade" id="myModal4" role="dialog">
+					<div class="modal-dialog">
+						<!-- creacion del contenido del modal4 -->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Rebelde sin Causa</h4>
+							</div>
+							<!-- creacion del cuerpo del modal4 -->
+							<div class="modal-body">
+								<div class="alert alert-warning">
+									<span class="glyphicon glyphicon-info-sign"></span> Pocas unidades
+								</div>
+								<div class="row">
+									<div class="col-xs-6 col-sm-6 col-md-6">
+										<div class="thumbnail">
+											<img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-4.jpg" alt="">
+										</div>
+									</div>
+									<h4>Precio: <strong>$499</strong></h4>
+									<h4>Calificacion:
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star-empty"></span>
+										<span class="glyphicon glyphicon-star-empty"></span>
+									</h4>
+									<h4>
+									<span class="label label-warning">Rebelde</span>
+									<span class="label label-default">Causa</span>
+									</h4>
+									<a href="#"><span class="glyphicon glyphicon-heart"></span> Agregar a los deseos</a>
+								</div>
+								<ul class="nav nav-tabs">
+									<li class="active"><a data-toggle="tab" href="#descripcion4">Descripcion</a></li>
+									<li><a data-toggle="tab" href="#comentarios4">Comentarios</a></li>
+								</ul>
+								<div class="tab-content">
+									<div id="descripcion4" class="tab-pane fade in active">
+										<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.</p>
+									</div>
+									<div id="comentarios4" class="tab-pane fade">
+										<div class="panel panel-default">
+											<div class="panel-heading">Zair Osorio comento hace 45 minutos</div>
+											<div class="panel-body">
+												Exelente coleccion.
+											</div>
+										</div>
+										<textarea class="form-control" rows="3" placeholder="Ingrese aqui su comentario"></textarea>
+									</div>
+								</div>
+								<!-- creacion del pie del modal4 -->
+								<div class="modal-footer">
+								    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+								    <button type="button" class="btn btn-primary">Comprar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- cierre del modal4 -->
+
+				<!-- Creacion del modal5 -->
+				<div class="modal fade" id="myModal5" role="dialog">
+					<div class="modal-dialog">
+						<!-- creacion del contenido del modal5 -->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Deportiva Full</h4>
+							</div>
+							<!-- creacion del cuerpo del modal5 -->
+							<div class="modal-body">
+								<div class="alert alert-succes">
+									<span class="glyphicon glyphicon-info-sign"></span> Unidades disponibles
+								
+									<div class="row">
+										<div class="col-xs-6 col-sm-6 col-md-6">
+											<div class="thumbnail">
+												<img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-5.jpg" alt="">
+											</div>
+										</div>
+										<h4>Precio: <strong>$299</strong></h4>
+										<h4>Calificacion:
+											<span class="glyphicon glyphicon-star"></span>
+											<span class="glyphicon glyphicon-star"></span>
+											<span class="glyphicon glyphicon-star-empty"></span>
+											<span class="glyphicon glyphicon-star-empty"></span>
+											<span class="glyphicon glyphicon-star-empty"></span>
+										</h4>
+										<h4>
+										<span class="label label-warning">Basica</span>
+										<span class="label label-default">Deportiva</span>
+										</h4>
+										<a href="#"><span class="glyphicon glyphicon-heart"></span> Agregar a los deseos</a>
+									</div>
+									<ul class="nav nav-tabs">
+										<li class="active"><a data-toggle="tab" href="#descripcion5">Descripcion</a></li>
+										<li><a data-toggle="tab" href="#comentarios5">Comentarios</a></li>
+									</ul>
+									<div class="tab-content">
+										<div id="descripcion5" class="tab-pane fade in active">
+											<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.</p>
+										</div>
+										<div id="comentarios5" class="tab-pane fade">
+											<div class="panel panel-default">
+												<div class="panel-heading">Luis Petro comento hace 5 minutos</div>
+												<div class="panel-body">
+												Lo mejor para hacer deporte al aire libre.
+												</div>
+											</div>
+											<textarea class="form-control" rows="3" placeholder="Ingrese aqui su comentario"></textarea>
+										</div>
+									</div>
+								</div>
+								<!-- creacion del pie del modal5 -->
+								<div class="modal-footer">
+								    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+								    <button type="button" class="btn btn-primary">Comprar</button>
+								</div>
+							</div> <!-- cierre del modal body -->
+						</div> <!-- cierre del modal content -->
+					</div> <!-- cierre del modal dialog -->
+				</div> <!-- cierre del modal5 -->
+			</div> <!-- cierre del contenedor interno -->
+		</div> <!-- cierre de la clase row -->
+	</div> <!-- cierre del contenedor primario -->
+</body>
+</html>
